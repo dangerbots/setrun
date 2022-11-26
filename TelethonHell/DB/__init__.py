@@ -4,9 +4,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import scoped_session, sessionmaker
 
-# from hellbot.config import Config
+from HellConfig import Config
 
-DB_URI = os.environ.get("DATABASE_URL")
+DB_URI = Config.DB_URI
 
 
 def start() -> scoped_session:
